@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询老师</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'search_teacher' %}">
+        {% csrf_token %}
+        <label for="teacher_name">老师名称：</label>
+        <input type="text" name="teacher_name" id="teacher_name">
+        <input type="submit" value="查询">
+    </form>
+</body>
+</html>

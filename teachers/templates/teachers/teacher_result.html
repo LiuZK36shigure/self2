@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>查询结果</title>
+</head>
+<body>
+    {% if teacher %}
+        <h1>{{ teacher.name }}</h1>
+        <p>所在系：{{ teacher.department }}</p>
+        <p>职称：{{ teacher.title }}</p>
+        <img src="{{ teacher.photo }}" alt="教师照片">
+    {% else %}
+        <h1>未找到匹配的老师</h1>
+    {% endif %}
+</body>
+</html>

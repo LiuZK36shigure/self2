@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>按系查询</title>
+</head>
+<body>
+    <form method="POST" action="{% url 'search_department' %}">
+        {% csrf_token %}
+        <label>系：</label><br>
+        <input type="checkbox" name="departments" value="传播学系"> 传播学系<br>
+        <input type="checkbox" name="departments" value="数字媒体系"> 数字媒体系<br>
+        <input type="checkbox" name="departments" value="设计系"> 设计系<br>
+        <input type="checkbox" name="departments" value="艺术教研中心"> 艺术教研中心<br>
+        <input type="submit" value="查询">
+    </form>
+</body>
+</html>
