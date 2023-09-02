@@ -1,0 +1,18 @@
+<form method="POST" action="{% url 'search_teacher_by_name' %}">
+  {% csrf_token %}
+  <label for="teacher_name">Teacher Name:</label>
+  <input type="text" id="teacher_name" name="teacher_name">
+  <button type="submit">Search</button>
+</form>
+
+<form method="POST" action="{% url 'search_teacher_by_department' %}">
+  {% csrf_token %}
+  <label for="departments">Departments:</label>
+  <select name="departments" id="departments" multiple>
+    <option value="传播学系">传播学系</option>
+    <option value="数字媒体系">数字媒体系</option>
+    <option value="设计系">设计系</option>
+    <option value="艺术教研中心">艺术教研中心</option>
+  </select>
+  <button type="submit">Search</button>
+</form>
